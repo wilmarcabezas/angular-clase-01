@@ -1,9 +1,10 @@
+import { CommonModule } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-formulario',
   standalone: true,
-  imports: [],
+  imports: [CommonModule],
   templateUrl: './formulario.component.html',
   styleUrl: './formulario.component.css'
 })
@@ -18,5 +19,9 @@ export class FormularioComponent implements OnInit {
   }
   mostrar_consola(name: string) {
     console.log('Hola ',name);
+
+    this.openAlert=true;
   }
+
+  openAlert: boolean = false;
 }
