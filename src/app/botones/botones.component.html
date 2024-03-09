@@ -11,3 +11,11 @@
 {{text_color}}
 
 <button class="secondary" (click)="button_disabled=!button_disabled">Activar/Desactivar</button>
+<hr/>
+<button class="btn btn-primary"
+ (click)="imagen='https://images.pexels.com/photos/20440051/pexels-photo-20440051/free-photo-of-moda-gente-mujer-relajacion.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'">
+Imagen 1</button>
+<button class="btn btn-danger" 
+(click)="imagen='https://images.pexels.com/photos/20410779/pexels-photo-20410779/free-photo-of-madera-paisaje-hoja-arbol.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'">
+Imagen 2</button><hr/>
+<img [src]="imagen" alt="" style="width: 200px;">
