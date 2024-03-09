@@ -1,10 +1,13 @@
 <hr />
 <div class="m-2">
-    <button class="btn btn-danger m-2" (click)="text_color='text-danger'">Rojo</button>
-    <button class="btn btn-success m-2" (click)="text_color='text-success'">Verde</button>
-    <button class="btn btn-primary m-2" (click)="text_color='text-primary'">Azul</button>
+    <button [class]="
+    {
+        'disabled' : button_disabled,
+    }" class="btn btn-danger m-2" (click)="text_color='text-danger'">Rojo</button>
+    <button [class.disabled]="button_disabled" class="btn btn-success m-2" (click)="text_color='text-success'">Verde</button>
+    <button [class.disabled]="button_disabled" class="btn btn-primary m-2" (click)="text_color='text-primary'">Azul</button>
 </div>
 <p [class]="text_color">Texto que cambia de color</p>
 {{text_color}}
 
-<button class="secondary">Activar/Desactivar</button>
+<button class="secondary" (click)="button_disabled=!button_disabled">Activar/Desactivar</button>

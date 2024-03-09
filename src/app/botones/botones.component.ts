@@ -10,5 +10,6 @@ import { Component } from '@angular/core';
 export class BotonesComponent {
 
 text_color: string='';
+button_disabled: boolean=true;
 
 }
