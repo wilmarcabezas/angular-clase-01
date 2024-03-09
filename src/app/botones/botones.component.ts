@@ -9,4 +9,6 @@ import { Component } from '@angular/core';
 })
 export class BotonesComponent {
 
+text_color: string='';
+
 }
