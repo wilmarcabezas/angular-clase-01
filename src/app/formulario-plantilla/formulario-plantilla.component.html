@@ -1,0 +1,22 @@
+<p>Formulario Plantilla</p>
+<div class="card">
+    <div class="card-body">
+
+        <form (ngSubmit)="procesarForm()">
+            <div class="mb-2">
+                <label class="form-label">
+                    Nombre
+                </label>
+                <input type="text" class="form-control" placeholder="Ingresa tu nombre" [(ngModel)]="persona.nombre" name="nombre">
+            </div>
+            <div>
+                <label class="form-label">
+                    Edad
+                </label>
+                <input type="number" class="form-control" placeholder="Ingresa tu edad" [(ngModel)]="persona.edad" name="edad">
+            </div>
+            <button class="btn btn-success mt-2">Enviar</button>
+        </form>
+        <pre>{{ persona.nombre }} {{persona.edad}}</pre>
+    </div>
+</div>
