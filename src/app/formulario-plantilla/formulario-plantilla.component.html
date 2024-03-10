@@ -7,16 +7,31 @@
                 <label class="form-label">
                     Nombre
                 </label>
-                <input type="text" class="form-control" placeholder="Ingresa tu nombre" [(ngModel)]="persona.nombre" name="nombre">
+                <input type="text" class="form-control" placeholder="Ingresa tu nombre"
+                 required #name="ngModel"
+                 [(ngModel)]="persona.nombre" name="nombre">
+                 <div class="alert alert-danger mt-2" [hidden]="name.valid || name.pristine">
+                    Nombre Obligatorio
+                 </div>
             </div>
             <div>
                 <label class="form-label">
                     Edad
                 </label>
-                <input type="number" class="form-control" placeholder="Ingresa tu edad" [(ngModel)]="persona.edad" name="edad">
+                <input type="number" class="form-control" placeholder="Ingresa tu edad" 
+                [(ngModel)]="persona.edad" 
+                required #edad="ngModel"
+                name="edad">
+                <div class="alert alert-danger mt-2" [hidden]="edad.valid || edad.pristine">
+                    Edad Obligatorio
+                 </div>
             </div>
             <button class="btn btn-success mt-2">Enviar</button>
         </form>
         <pre>{{ persona.nombre }} {{persona.edad}}</pre>
+        <hr/>
+        
+        
+        
     </div>
 </div>
