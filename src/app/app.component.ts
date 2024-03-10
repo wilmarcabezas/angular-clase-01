@@ -9,16 +9,18 @@ import { SwitchComponent } from './switch/switch.component';
 import { FormularioPlantillaComponent } from './formulario-plantilla/formulario-plantilla.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import {FormularioReactivoComponent} from './formulario-reactivo/formulario-reactivo.component'
+import { ChildrenComponent } from './children/children.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
   imports: [RouterOutlet, FormsModule, ReactiveFormsModule, FooterComponent, 
     BuclesComponent, SwitchComponent,ContadorComponent, BotonesComponent, 
+    ChildrenComponent,
     FormularioComponent, FormularioPlantillaComponent,FormularioReactivoComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  title = 'Angular Class';
+  title = 'Soy el Componente app';
 }
