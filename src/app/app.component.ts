@@ -22,5 +22,5 @@ import { ChildrenComponent } from './children/children.component';
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  title = 'Soy el Componente app';
+  title = 'Curso Angular';
 }

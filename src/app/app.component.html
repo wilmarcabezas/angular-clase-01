@@ -1,7 +1,9 @@
 <div class="container">
-    <app-children title="Texto de Padre a Hijo"></app-children>
-    <br/>
-    <app-children [title]="title"></app-children>
-    <hr/>
-    <input type="text" [(ngModel)]="title">
+    <h2>Componente Padre</h2>
+    <input type="text" class="form-control mb-4" [(ngModel)]="title">
+
+    <app-children [title]="title" 
+    (titleChange)="title=$event"/>
+
+    <app-children [(title)]="title"></app-children>
 </div>
