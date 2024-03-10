@@ -2,7 +2,7 @@
 <div class="card">
     <div class="card-body">
 
-        <form (ngSubmit)="procesarForm()">
+        <form (ngSubmit)="procesarForm()" #formContact="ngForm">
             <div class="mb-2">
                 <label class="form-label">
                     Nombre
@@ -26,12 +26,12 @@
                     Edad Obligatorio
                  </div>
             </div>
-            <button class="btn btn-success mt-2">Enviar</button>
+            <button [disabled]="formContact.invalid" class="btn btn-success mt-2">Enviar</button>
         </form>
         <pre>{{ persona.nombre }} {{persona.edad}}</pre>
         <hr/>
         
-        
+        {{formContact.invalid}}
         
     </div>
 </div>
