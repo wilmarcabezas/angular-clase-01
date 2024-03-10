@@ -10,13 +10,15 @@ import { FormularioPlantillaComponent } from './formulario-plantilla/formulario-
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import {FormularioReactivoComponent} from './formulario-reactivo/formulario-reactivo.component'
 import { ChildrenComponent } from './children/children.component';
+import { AddMessagesComponent } from './add-messages/add-messages.component';
+import { ListMessagesComponent } from './list-messages/list-messages.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
   imports: [RouterOutlet, FormsModule, ReactiveFormsModule, FooterComponent, 
     BuclesComponent, SwitchComponent,ContadorComponent, BotonesComponent, 
-    ChildrenComponent,
+    ChildrenComponent, AddMessagesComponent, ListMessagesComponent, 
     FormularioComponent, FormularioPlantillaComponent,FormularioReactivoComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
