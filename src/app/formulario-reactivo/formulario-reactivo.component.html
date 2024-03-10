@@ -1,5 +1,5 @@
 <p>formulario-reactivo works!</p>
-<form>
+<form [formGroup]="formUser" (ngSubmit)="procesar()">
     <div class="card">
         <div class="card-body">
             <label for="" class="form-label">Nombre</label>
@@ -19,7 +19,7 @@
                 </span>
             </div>
 
-            <button class="mt-2 btn btn-success">Enviar</button>
+            <button [disabled]="formUser.invalid" class="mt-2 btn btn-success">Enviar</button>
         </div>
 
     </div>
