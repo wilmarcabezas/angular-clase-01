@@ -7,13 +7,15 @@ import { FormularioComponent } from './formulario/formulario.component';
 import { BuclesComponent } from './bucles/bucles.component';
 import { SwitchComponent } from './switch/switch.component';
 import { FormularioPlantillaComponent } from './formulario-plantilla/formulario-plantilla.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import {FormularioReactivoComponent} from './formulario-reactivo/formulario-reactivo.component'
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, FormsModule, FooterComponent, BuclesComponent, SwitchComponent,//
-    ContadorComponent, BotonesComponent, FormularioComponent, FormularioPlantillaComponent],
+  imports: [RouterOutlet, FormsModule, ReactiveFormsModule, FooterComponent, 
+    BuclesComponent, SwitchComponent,ContadorComponent, BotonesComponent, 
+    FormularioComponent, FormularioPlantillaComponent,FormularioReactivoComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
